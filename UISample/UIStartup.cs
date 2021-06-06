@@ -1,12 +1,12 @@
-﻿using System;
-using CMFG.DLX.Automation.UIFramework.Utilities;
+﻿using CMFG.DLX.Automation.UIFramework.Utilities;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Logging;
+using System;
 
-namespace CMFG.DLX.Automation.UIFramework
+namespace UISample
 {
-	public static class UIStartup
+    public static class UIStartup
 	{
 		private static IServiceProvider _serviceProvider;
 

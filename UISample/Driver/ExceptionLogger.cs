@@ -4,7 +4,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 
-namespace CMFG.DLX.Automation.UIFramework.Driver
+namespace UISample.Driver
 {
 	public class ExceptionLogger
 	{

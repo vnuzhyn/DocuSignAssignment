@@ -19,7 +19,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Dapper" Version="2.0.78" />
 		<PackageReference Include="DotNetSeleniumExtras.WaitHelpers" Version="3.11.0" />
 		<PackageReference Include="Microsoft.AspNetCore.Hosting.Abstractions" Version="2.2.0" />
 		<PackageReference Include="Microsoft.Extensions.Configuration" Version="5.0.0" />
@@ -35,12 +34,6 @@
 		<PackageReference Include="System.IO.FileSystem.AccessControl" Version="5.0.0" />
 		<PackageReference Include="WebDriverManager" Version="2.11.1" />
 		<PackageReference Include="xunit" Version="2.4.1" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <Folder Include="Features\" />
-	  <Folder Include="Pages\" />
-	  <Folder Include="StepDefinitions\Hooks\" />
 	</ItemGroup>
 
 </Project>

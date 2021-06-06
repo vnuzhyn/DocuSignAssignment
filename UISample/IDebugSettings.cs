@@ -1,4 +1,4 @@
-﻿namespace CMFG.DLX.Automation.UIFramework
+﻿namespace UISample
 {
 	public interface IDebugSettings
 	{

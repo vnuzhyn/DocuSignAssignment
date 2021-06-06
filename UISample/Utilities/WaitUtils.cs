@@ -1,13 +1,14 @@
-﻿using System;
-using System.Threading;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
+using System;
+using System.Threading;
+using UISample;
 using ExpectedConditions = SeleniumExtras.WaitHelpers.ExpectedConditions;
 
 namespace CMFG.DLX.Automation.UIFramework.Utilities
 {
-	public static class WaitUtils
+    public static class WaitUtils
 	{
 		public static int defaultImplicitWait = 3;
 

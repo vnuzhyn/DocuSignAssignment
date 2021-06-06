@@ -1,4 +1,4 @@
-﻿using CMFG.DLX.Automation.UIFramework.Chrome;
+﻿using System;
 using CMFG.DLX.Automation.UIFramework.Utilities;
 using Microsoft.Extensions.DependencyInjection;
 using OpenQA.Selenium;
@@ -7,11 +7,11 @@ using OpenQA.Selenium.Edge;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Remote;
 using OpenQA.Selenium.Safari;
-using System;
+using UISample.Chrome;
 using WebDriverManager;
 using WebDriverManager.DriverConfigs.Impl;
 
-namespace CMFG.DLX.Automation.UIFramework.Driver
+namespace UISample.Driver
 {
     public static class DriverFactory
 	{

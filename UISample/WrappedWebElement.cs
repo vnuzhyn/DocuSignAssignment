@@ -1,16 +1,16 @@
-﻿using System;
-using System.Collections.ObjectModel;
-using System.Drawing;
-using System.Runtime.CompilerServices;
-using CMFG.DLX.Automation.UIFramework.Utilities;
+﻿using CMFG.DLX.Automation.UIFramework.Utilities;
 using Microsoft.Extensions.Logging;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Internal;
 using SeleniumExtras.WaitHelpers;
+using System;
+using System.Collections.ObjectModel;
+using System.Drawing;
+using System.Runtime.CompilerServices;
 
-namespace CMFG.DLX.Automation.UIFramework
+namespace UISample
 {
-	public class WrappedWebElement : IWebElement, IWrapsElement
+    public class WrappedWebElement : IWebElement, IWrapsElement
 	{
 		private readonly Lazy<IWebElement> _element;
 		private readonly ILogger _logger;

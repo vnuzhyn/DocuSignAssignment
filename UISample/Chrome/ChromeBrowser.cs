@@ -2,7 +2,7 @@
 using System.IO;
 using System.Linq;
 
-namespace CMFG.DLX.Automation.UIFramework.Chrome
+namespace UISample.Chrome
 {
 	internal class ChromeBrowser
 	{

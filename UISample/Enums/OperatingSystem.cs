@@ -1,4 +1,4 @@
-﻿namespace CMFG.DLX.Automation.UIFramework.Enums
+﻿namespace UISample.Enums
 {
 	internal class OperatingSystem
 	{

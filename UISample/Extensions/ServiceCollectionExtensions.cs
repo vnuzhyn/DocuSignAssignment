@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 
-namespace CMFG.DLX.Automation.UIFramework.Extensions
+namespace UISample.Extensions
 {
 	public static class ServiceCollectionExtensions
 	{

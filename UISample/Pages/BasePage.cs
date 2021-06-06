@@ -1,18 +1,19 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
-using CMFG.DLX.Automation.UIFramework.Driver;
-using CMFG.DLX.Automation.UIFramework.Extensions;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
+using UISample.Driver;
+using UISample.Extensions;
 using ExpectedConditions = SeleniumExtras.WaitHelpers.ExpectedConditions;
 
-namespace CMFG.DLX.Automation.UIFramework
+namespace UISample.Pages
 {
 	public class BasePage
 	{
 		public static Uri Url;
 		protected IWebDriver Driver;
 		protected Navigator App { get; set; }
+        public static readonly int Timeout = new ConfigReader().TimeOut;
 
 		public void Init(Navigator app)
 		{

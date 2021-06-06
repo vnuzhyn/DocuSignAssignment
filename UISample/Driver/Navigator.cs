@@ -1,7 +1,8 @@
 ﻿using System;
 using OpenQA.Selenium;
+using UISample.Pages;
 
-namespace CMFG.DLX.Automation.UIFramework.Driver
+namespace UISample.Driver
 {
 	public class Navigator
 	{
