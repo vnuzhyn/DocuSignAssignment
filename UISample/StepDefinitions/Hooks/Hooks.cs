@@ -96,7 +96,6 @@ namespace UISample.StepDefinitions.Hooks
 			var driver = LaunchBrowser();
 			WaitUtils.WaitUntilPageIsLoaded(driver.Driver, TimeOut);
 			feature.Add(App, driver);
-			WaitUtils.Waiter(2);
         }
 	}
 }

@@ -1,5 +1,6 @@
 ﻿using OpenQA.Selenium;
 using UISample.Extensions;
+using UISample.Utilities;
 using Xunit;
 
 namespace UISample.Pages
@@ -10,8 +11,8 @@ namespace UISample.Pages
 
         public void ConfirmThumbsUpExist()
         {
+            WaitUtils.WaitUntilPageIsLoaded(Driver, Timeout);
             ThumbsUp.ScrollPageTo();
-            ThumbsUp.WaitUntilVisible(Timeout);
             Assert.True(ThumbsUp.Displayed);
         }
     }

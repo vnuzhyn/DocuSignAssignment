@@ -13,7 +13,6 @@ namespace UISample.Pages
             SearchInput.Clear();
             SearchInput.ScrollPageTo().WaitUntilClickable(Timeout).SendKeys(keyword);
             SearchButton.WaitUntilClickable(Timeout).Click();
-            //WaitUtils.Waiter(2);
         }
     }
 }
