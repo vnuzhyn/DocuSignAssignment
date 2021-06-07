@@ -2,7 +2,7 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 
-namespace CMFG.DLX.Automation.UIFramework.Utilities
+namespace UISample.Utilities
 {
 	public interface IWaitProvider
 	{

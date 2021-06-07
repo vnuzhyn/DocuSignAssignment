@@ -12,7 +12,7 @@ namespace UISample.Extensions
 {
 	public static class ElementExtensions
 	{
-		private static bool ContinueOnFailure =>
+		public static bool ContinueOnFailure =>
 			UIStartup.ServiceProvider.GetRequiredService<IDebugSettings>().ContinueOnFailure;
 
 		private static IWebDriver GetDriver(IWebElement element)
@@ -121,7 +121,7 @@ namespace UISample.Extensions
 			}
 		}
 
-		private static void HandleContinueOnFailure(IWebElement element, Exception e)
+		public static void HandleContinueOnFailure(IWebElement element, Exception e)
 		{
 			var logger = UIStartup.GetLogger<IWebElement>();
 			var logStart = "";

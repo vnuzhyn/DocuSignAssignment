@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CMFG.DLX.Automation.UIFramework.Utilities
+namespace UISample.Utilities
 {
 	public class DateTimeUtil
 	{

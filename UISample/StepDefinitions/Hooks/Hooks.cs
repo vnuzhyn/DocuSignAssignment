@@ -1,10 +1,10 @@
-﻿using CMFG.DLX.Automation.UIFramework.Utilities;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
 using System;
 using System.Drawing;
 using TechTalk.SpecFlow;
 using TechTalk.SpecFlow.Tracing;
 using UISample.Driver;
+using UISample.Utilities;
 
 namespace UISample.StepDefinitions.Hooks
 {
@@ -12,11 +12,11 @@ namespace UISample.StepDefinitions.Hooks
 	internal class Hooks
 	{
 		private const string App = "app";
-		protected static readonly ConfigReader EnvironmentReader = new ConfigReader();
-        private static readonly string Url = EnvironmentReader.BaseUrl;
-        private static readonly int TimeOut = EnvironmentReader.TimeOut;
-        private static readonly string Browser = EnvironmentReader.Browser;
-        private static readonly bool RunRemotely = EnvironmentReader.RunTestsRemotely;
+		protected static readonly ConfigReader ConfigReader = new ConfigReader();
+        private static readonly string Url = ConfigReader.BaseUrl;
+        private static readonly int TimeOut = ConfigReader.TimeOut;
+        private static readonly string Browser = ConfigReader.Browser;
+        private static readonly bool RunRemotely = ConfigReader.RunTestsRemotely;
 
 		[BeforeFeature]
 		public static void BeforeFeature(FeatureContext feature)
@@ -73,11 +73,10 @@ namespace UISample.StepDefinitions.Hooks
 
 			try
             {
-                DriverFactory.Build(Browser, RunRemotely);
+                driver = DriverFactory.Build(Browser, RunRemotely);
 
                 driver.Manage().Window.Size = new Size(1920, 1080);
-				
-
+                
 				driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(TimeOut);
 				driver.Navigate().GoToUrl(Url);
 				driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(180);
@@ -97,6 +96,7 @@ namespace UISample.StepDefinitions.Hooks
 			var driver = LaunchBrowser();
 			WaitUtils.WaitUntilPageIsLoaded(driver.Driver, TimeOut);
 			feature.Add(App, driver);
+			WaitUtils.Waiter(2);
         }
 	}
 }

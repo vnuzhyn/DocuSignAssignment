@@ -1,13 +1,12 @@
-﻿using System;
-using CMFG.DLX.Automation.UIFramework.Utilities;
-using Microsoft.Extensions.DependencyInjection;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Edge;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Remote;
 using OpenQA.Selenium.Safari;
+using System;
 using UISample.Chrome;
+using UISample.Utilities;
 using WebDriverManager;
 using WebDriverManager.DriverConfigs.Impl;
 
@@ -25,14 +24,11 @@ namespace UISample.Driver
 			{
 				case "chrome":
 					var chromeOptions = new ChromeOptions();
-					if (UIStartup.ServiceProvider.GetRequiredService<IDebugSettings>().AttachToExistingProcess)
-					{
-						var chromeBrowser = new ChromeBrowser();
-						chromeBrowser.StartIfNotRunning();
-						chromeOptions.DebuggerAddress = $"localhost:{chromeBrowser.DebuggingPort}";
-					}
+                    var chromeBrowser = new ChromeBrowser();
+                    chromeBrowser.StartIfNotRunning();
+                    chromeOptions.DebuggerAddress = $"localhost:{chromeBrowser.DebuggingPort}";
 
-					chromeOptions.SetLoggingPreference(LogType.Browser, LogLevel.All);
+                    chromeOptions.SetLoggingPreference(LogType.Browser, LogLevel.All);
 					new DriverManager().SetUpDriver(new ChromeConfig(), driverVersion);
 					webDriver = runTestsRemotely ? new RemoteWebDriver(new Uri(nodeURI), chromeOptions) : new ChromeDriver(chromeOptions);
 					break;

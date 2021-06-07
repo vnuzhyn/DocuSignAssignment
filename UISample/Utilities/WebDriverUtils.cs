@@ -2,7 +2,7 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
 
-namespace CMFG.DLX.Automation.UIFramework.Utilities
+namespace UISample.Utilities
 {
 	public static class WebDriverUtils
 	{

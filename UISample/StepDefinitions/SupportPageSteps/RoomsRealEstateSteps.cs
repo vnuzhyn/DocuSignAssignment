@@ -1,9 +1,16 @@
 ﻿using TechTalk.SpecFlow;
+using UISample.Pages;
+using Xunit;
 
 namespace UISample.StepDefinitions.SupportPageSteps
 {
+    [Binding]
     public class RoomsRealEstateSteps : BaseSteps
     {
+        public RoomsRealEstateSteps(FeatureContext featureContext, ScenarioContext scenarioContext) : base(featureContext, scenarioContext)
+        {
+        }
+
         [Given(@"consumer is at the support home page")]
         public void GivenConsumerIsAtTheSupportHomePage()
         {
@@ -11,28 +18,28 @@ namespace UISample.StepDefinitions.SupportPageSteps
         }
 
         [When(@"consumer is searching for '(.*)'")]
-        public void WhenConsumerIsSearchingFor(string p0)
+        public void WhenConsumerIsSearchingFor(string input)
         {
-            ScenarioContext.Current.Pending();
+            Driver.Page<SupportHomePage>().SearchFor(input);
         }
 
         [When(@"search response contains (.*) total results")]
-        public void WhenSearchResponseContainsTotalResults(int p0)
+        public void WhenSearchResponseContainsTotalResults(int resultsCount)
         {
-            ScenarioContext.Current.Pending();
+            var el = Driver.Page<SupportSearchResults>().SearchResultInfo;
+            Driver.Page<SupportSearchResults>().AssertTextContains(el, resultsCount.ToString());
         }
 
-        [When(@"consumer is searching and clicking on '(.*)'")]
-        public void WhenConsumerIsSearchingAndClickingOn(string p0)
+        [When(@"consumer is searching and clicking on 'Download and Print Documents - DocuSign Rooms'")]
+        public void WhenConsumerIsSearchingAndClickingOn()
         {
-            ScenarioContext.Current.Pending();
+            Driver.Page<SupportSearchResults>().ClickOnRoomsDocs();
         }
 
-        [Then(@"thumbs up button from the '(.*)' section exists")]
-        public void ThenThumbsUpButtonFromTheSectionExists(string p0)
+        [Then(@"thumbs up button from the 'Was this content helpful' section exists")]
+        public void ThenThumbsUpButtonFromTheSectionExists()
         {
-            ScenarioContext.Current.Pending();
+            Driver.Page<SupportSearchItem>().ConfirmThumbsUpExist();
         }
-
     }
 }

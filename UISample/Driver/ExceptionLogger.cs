@@ -10,7 +10,7 @@ namespace UISample.Driver
 	{
 		private static readonly string[] AssembliesToIgnore =
 		{
-			"CMFG.DLX.Automation.UIFramework", "xunit.assert"
+			"UISample", "xunit.assert"
 		};
 
 		public void Log(Exception e)

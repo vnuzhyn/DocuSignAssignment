@@ -1,5 +1,4 @@
-﻿using CMFG.DLX.Automation.UIFramework.Utilities;
-using Microsoft.Extensions.Logging;
+﻿using Microsoft.Extensions.Logging;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Internal;
 using SeleniumExtras.WaitHelpers;
@@ -7,6 +6,7 @@ using System;
 using System.Collections.ObjectModel;
 using System.Drawing;
 using System.Runtime.CompilerServices;
+using UISample.Utilities;
 
 namespace UISample
 {
@@ -157,7 +157,7 @@ namespace UISample
 			LogDebug();
 			Element.SendKeys(text);
 		}
-
+        
 		public void Submit()
 		{
 			LogDebug();

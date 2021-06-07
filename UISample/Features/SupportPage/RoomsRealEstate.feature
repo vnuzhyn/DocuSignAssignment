@@ -8,4 +8,4 @@ Scenario: Navigation header on standard screen dimensions
 	When consumer is searching for 'Rooms for Real Estate'
 	And search response contains 55 total results
 	And consumer is searching and clicking on 'Download and Print Documents - DocuSign Rooms'
-	Then thumbs up button from the 'Was this content helpful?' section exists
+	Then thumbs up button from the 'Was this content helpful' section exists

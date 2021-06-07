@@ -4,7 +4,7 @@ using System.Drawing.Imaging;
 using System.IO;
 using OpenQA.Selenium;
 
-namespace CMFG.DLX.Automation.UIFramework.Utilities
+namespace UISample.Utilities
 {
 	public class ScreenshotUtil
 	{
