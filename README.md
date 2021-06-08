@@ -1,20 +1,14 @@
 # Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+This is a project for DocuSign Selenium exercise written in C# which implements POM and BDD
 
 # Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+All required dependencies should be installed for the project.
+Please make sure to install one extension - Specflow for Visual Studio 2019
 
 # Build and Test
-TODO: Describe and show how to build your code and run the tests. 
-
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
-
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+Project supposed to build successfully 
+In the output window please make sure to 'Show output from: Tests'
+Open Test Explorer and try running test
+Test won't run and in Tests output there will be information and URL on how to create free Specflow+ account
+Navigate the URL and create free account
+Open Test Explorer and try running test
