@@ -1,14 +1,14 @@
-﻿using System;
-using System.Runtime.CompilerServices;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
+using System;
+using System.Runtime.CompilerServices;
 using UISample.Driver;
 using UISample.Extensions;
 using ExpectedConditions = SeleniumExtras.WaitHelpers.ExpectedConditions;
 
 namespace UISample.Pages
 {
-	public class BasePage
+    public class BasePage
 	{
 		public static Uri Url;
 		protected IWebDriver Driver;
@@ -70,7 +70,7 @@ namespace UISample.Pages
 				Driver.FindElement(locatorKey);
 				return false;
 			}
-			catch (NoSuchElementException e)
+			catch (NoSuchElementException)
 			{
 				return true;
 			}

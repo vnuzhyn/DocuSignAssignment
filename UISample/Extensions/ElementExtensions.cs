@@ -141,7 +141,7 @@ namespace UISample.Extensions
 			return element;
 		}
 
-		public static IWebElement Highlight(this IWebElement element, string borderWidth = "1px", string borderStyle = "solid", string color = "green")
+        public static IWebElement Highlight(this IWebElement element, string borderWidth = "1px", string borderStyle = "solid", string color = "green")
 		{
 			var jsDriver = GetJavaScriptExecutor(element);
 			var highlightJavascript = $@"arguments[0].style.cssText = ""border-width: {borderWidth}; border-style: {borderStyle}; border-color: {color}"";";
